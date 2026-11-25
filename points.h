@@ -14,12 +14,14 @@ typedef struct Point {
 } Point;
 
 /*
- * Constructor methods
+ * Constructor and point generation methods
  */
 Point new_point(int d);
 
 void apply_coords(Point *p, double *coords);
 // Point new_point(int d, double *coords);
+
+Point *generate_random_points(int n, int d, int seed);
 
 /*
  * Algebraic operation between poinst

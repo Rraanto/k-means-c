@@ -23,6 +23,19 @@ void apply_coords(Point *p, double *coords) {
   }
 }
 
+Point *generate_random_points(int n, int d, int seed) {
+  srand(seed);
+  Point *points = (Point *)malloc(n * sizeof(*points));
+
+  for (int i = 0; i < n; i++) {
+    points[i] = new_point(d);
+    for (int j = 0; j < d; j++)
+      points[i].coords[j] = (double)rand() / RAND_MAX;
+  }
+
+  return points;
+}
+
 /**
  * Algebraic operations
  */

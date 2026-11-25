@@ -23,7 +23,7 @@ int *kmeans(int k, int n, int d, Point *centroids, Point *points) {
   int *res = calloc(n, sizeof *res);
 
   int stop = 0;
-  int max_iter = 10000;
+  int max_iter = 100000;
   int iter;
 
   for (iter = 0; (stop == 0) && (iter < max_iter); iter++) {
